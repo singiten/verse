@@ -1,0 +1,412 @@
+section {
+  padding: 3rem 1.25rem;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+/* Language Toggle */
+.lang-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  background: var(--maroon);
+  color: var(--gold);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  border: 1px solid var(--gold);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100dvh; /* 100dvh is best for mobile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #fff 0%, var(--cream) 100%);
+  padding: 2rem 1.5rem;
+}
+
+.hero-content {
+  animation: fadeIn 1.2s ease-out;
+}
+
+.hero-greeting {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.hero-name {
+  font-size: clamp(3rem, 15vw, 5rem); /* Huge on mobile, scales down */
+  color: var(--maroon);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 2rem auto;
+}
+
+.hero-love {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 80%;
+  margin: 0 auto 2.5rem auto;
+}
+
+.primary-btn {
+  background: var(--maroon);
+  color: white;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 15px rgba(122, 31, 43, 0.3);
+  transition: transform 0.2s;
+}
+
+.primary-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Shared Section Styles */
+.section-container {
+  padding: 4rem 1.25rem;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: var(--maroon);
+  margin-bottom: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Message Section */
+.message-section {
+  background-color: var(--cream);
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(122, 31, 43, 0.05);
+  border: 1px solid rgba(212, 165, 55, 0.2);
+}
+
+.message-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+
+.message-signoff {
+  font-weight: 700;
+  color: var(--maroon);
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+/* Blessing Section */
+.blessing-section {
+  background-color: var(--maroon);
+  color: white;
+  max-width: 100%; /* Make it full width */
+}
+
+.blessing-content {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.blessing-section .section-title {
+  color: var(--gold);
+}
+
+.verse-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(212, 165, 55, 0.3);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.verse-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.verse-ref {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.prayer-note {
+  font-size: 1rem;
+  color: #e6d5c3;
+  font-style: italic;
+}
+/* Gallery Section */
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-item {
+  flex: 0 0 85%; /* Shows a peek of the next image */
+  scroll-snap-align: center;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.gallery-caption {
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--maroon);
+  background: white;
+}
+
+/* Wishes Section */
+.wishes-section {
+  background-color: #f7ece1;
+}
+
+.wishes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.wish-card {
+  background: white;
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--gold);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.wish-text {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+.wish-author {
+  margin: 0;
+  font-weight: 700;
+  color: var(--maroon);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.wish-form-card {
+  margin-top: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fafafa;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--maroon);
+  background: white;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.success-msg {
+  color: green;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+/* Verses Section */
+.verses-section {
+  background-color: var(--cream);
+}
+
+.verses-subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-top: -1rem;
+}
+
+.verses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.favorite-verse-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  border-left: 4px solid var(--maroon);
+  transition: transform 0.2s;
+}
+
+.favorite-verse-card:active {
+  transform: scale(0.98); /* Slight tap effect on mobile */
+}
+
+.fav-verse-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.fav-verse-ref {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+/* Music Player Section */
+.music-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.music-hint {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.music-buttons-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px; /* Keeps the buttons from getting too wide on desktop */
+}
+
+.music-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  color: var(--maroon);
+  border: 2px solid var(--maroon);
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.music-btn:active {
+  transform: scale(0.95);
+}
+
+/* Vinyl Disc Animation */
+.vinyl-disc {
+  width: 32px;
+  height: 32px;
+  background: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333;
+  flex-shrink: 0;
+}
+
+.vinyl-center {
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* Spin animation when playing */
+.music-btn.playing .vinyl-disc {
+  animation: spin 2s linear infinite;
+}
+
+.music-btn.playing {
+  background-color: var(--cream);
+  border-color: var(--gold);
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
