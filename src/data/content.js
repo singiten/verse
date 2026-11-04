@@ -2,7 +2,7 @@ export const content = {
   name: { am: "ጆ", en: "Jo" },
   nickname: { am: "ጆሲ", en: "Josi" },
   
-  // Use placeholder photos for now (we'll add real ones to public/photos later)
+
   photos: [
   { src: "/photos/jo4.jpg", caption: { am: "ትዝታ ፩", en: "Memory 1" } },
   { src: "/photos/jo5.jpg", caption: { am: "ትዝታ ፪", en: "Memory 2" } },
