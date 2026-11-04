@@ -2,65 +2,58 @@ export const content = {
   name: { am: "ጆ", en: "Jo" },
   nickname: { am: "ጆሲ", en: "Josi" },
   
-
   photos: [
-  { src: "/photos/jo4.jpg", caption: { am: "ትዝታ ፩", en: "Memory 1" } },
-  { src: "/photos/jo5.jpg", caption: { am: "ትዝታ ፪", en: "Memory 2" } },
-   { src: "/photos/jo6.jpg", caption: { am: "ትዝታ ፪", en: "Memory 2" } },
-    { src: "/photos/jo7.jpg", caption: { am: "ትዝታ ፪", en: "Memory 2" } },
-     { src: "/photos/jo1.jpg", caption: { am: "ትዝታ ፪", en: "Memory 2" } },
-      { src: "/photos/jo2.jpg", caption: { am: "ትዝታ ፪", en: "Memory 2" } },
-       { src: "/photos/jo3.jpg", caption: { am: "ትዝታ ፪", en: "Memory 2" } },
-],
-
-  timeline: [
-    { year: "2015", am: "ተገናኘን", en: "We met" },
-    { year: "2018", am: "የመጀመሪያ ጉዞአችን", en: "Our first trip" },
-    { year: "2020", am: "ጥምቀት - አብረን አከበርን", en: "Timkat - Celebrated together" },
-    { year: "ዛሬ", en: "Today", am: "የልደትህ ቀን!" }
+    { src: "/photos/jo4.jpg", caption: { am: "ትዝታ ፩", en: "Memory 1" } },
+    { src: "/photos/jo5.jpg", caption: { am: "ትዝታ ፪", en: "Memory 2" } },
+    { src: "/photos/jo6.jpg", caption: { am: "ትዝታ ፫", en: "Memory 3" } },
+    { src: "/photos/jo7.jpg", caption: { am: "ትዝታ ፬", en: "Memory 4" } },
+    { src: "/photos/jo1.jpg", caption: { am: "ትዝታ ፭", en: "Memory 5" } },
+    { src: "/photos/jo2.jpg", caption: { am: "ትዝታ ፮", en: "Memory 6" } },
+    { src: "/photos/jo3.jpg", caption: { am: "ትዝታ ፯", en: "Memory 7" } },
   ],
+
   favoriteVerses: [
     {
       text: { 
         am: "የሰው ልብ መንገዱ ያዘጋጃል፤ እግዚአብሔር ግን አካሄዱን ያቀናለታል።", 
-        en: "And we know that in all things God works for the good of those who love him." 
+        en: "In their hearts humans plan their course, but the Lord establishes their steps." 
       },
-      ref: { am: "መጽሐፈ ምሳሌ 16:9", en: "Romans 8:28" }
+      ref: { am: "መጽሐፈ ምሳሌ 16:9", en: "Proverbs 16:9" }
     },
     {
       text: { 
         am: "ጭንቀት ቀርባለችና የሚረዳኝም የለምና ከእኔ አትራቅ።", 
-        en: "I can do all things through Christ who strengthens me." 
+        en: "Do not be far from me, for trouble is near and there is no one to help." 
       },
-      ref: { am: "መዝሙረ ዳዊት 21:11", en: "Philippians 4:13" }
+      ref: { am: "መዝሙረ ዳዊት 21:11", en: "Psalm 22:11" }
     },
     {
       text: { 
         am: "በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ።", 
-        en: "For I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future." 
+        en: "In my distress I called to the Lord; I cried to my God for help. From his temple he heard my voice." 
       },
-      ref: { am: "መዝሙረ ዳዊት 17:6", en: "Jeremiah 29:11" }
+      ref: { am: "መዝሙረ ዳዊት 17:6", en: "Psalm 18:6" }
     },
     {
       text: { 
-        am: "የሞት ጣር ያዘኝ፤ የዓመፅ ፈሳሽም አስፈራኝ፤ የሲኦል ጣር ከበበኝ፤ የሞት ወጥመድ ደረሰብኝ። በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ። ", 
-        en: "For I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future." 
+        am: "የሞት ጣር ያዘኝ፤ የዓመፅ ፈሳሽም አስፈራኝ፤ የሲኦል ጣር ከበበኝ፤ የሞት ወጥመድ ደረሰብኝ። በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ።", 
+        en: "The cords of death entangled me... In my distress I called to the Lord; I cried to my God for help." 
       },
-      ref: { am: "መጽሐፈ ሳሙኤል ካል 22:5-7", en: "መጽሐፈ ሳሙኤል ካል 22:5-7" }
+      ref: { am: "መጽሐፈ ሳሙኤል ካል 22:5-7", en: "2 Samuel 22:5-7" }
     },
     {
       text: { 
         am: "ጸሎቴን ያልከለከለኝ ምሕረቱንም ከእኔ ያላራቀ እግዚአብሔር ይመስገን።", 
-        en: "Blessed {be} God, which hath not turned away my prayer, nor his mercy from me." 
+        en: "Praise be to God, who has not rejected my prayer or withheld his love from me!" 
       },
-      ref: { am: "መዝሙረ ዳዊት 65:20", en: "መዝሙረ ዳዊት 65:20 }
+      ref: { am: "መዝሙረ ዳዊት 65:20", en: "Psalm 66:20" }
     },
     {
       text: { 
         am: "ነፍሳችን እንደ ወፍ ከአዳኞች ወጥመድ አመለጠች። ወጥመድ ተሰበረ እኛም አመለጥን።", 
-        en: "For I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future." 
+        en: "We have escaped like a bird from the fowler’s snare; the snare has been broken, and we have escaped." 
       },
-      ref: { am: "መዝሙረ ዳዊት 123:7", en: "መዝሙረ ዳዊት 123:7" }
+      ref: { am: "መዝሙረ ዳዊት 123:7", en: "Psalm 124:7" }
     }
   ]
 };
