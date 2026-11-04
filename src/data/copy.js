@@ -37,7 +37,7 @@ export const copy = {
   },
   closing: {
     title: { am: "አመሰግናለሁ", en: "Thank You" },
-    body: { am: "ይህን ገጽ ለመጎብኘትህ አመሰግናለሁ። መልካም ልደት! 🎂", en: "Thank you for visiting. Happy Birthday! 🎂" },
+    body: { am: "መልካም ልደት! 🎂", en: "Happy Birthday! 🎂" },
     share: { am: "አጋራ", en: "Share" }
   }
 };
