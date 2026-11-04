@@ -1,5 +1,5 @@
 export const content = {
-  name: { am: "ጆሴፍ", en: "Joseph" },
+  name: { am: "ጆ", en: "Jo" },
   nickname: { am: "ጆሲ", en: "Josi" },
   
   // Use placeholder photos for now (we'll add real ones to public/photos later)
@@ -43,24 +43,24 @@ export const content = {
     },
     {
       text: { 
-        am: "በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ።", 
+        am: "የሞት ጣር ያዘኝ፤ የዓመፅ ፈሳሽም አስፈራኝ፤ የሲኦል ጣር ከበበኝ፤ የሞት ወጥመድ ደረሰብኝ። በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ። ", 
         en: "For I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future." 
       },
-      ref: { am: "መዝሙረ ዳዊት 17:6", en: "Jeremiah 29:11" }
+      ref: { am: "መጽሐፈ ሳሙኤል ካል 22:5-7", en: "መጽሐፈ ሳሙኤል ካል 22:5-7" }
     },
     {
       text: { 
-        am: "በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ።", 
-        en: "For I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future." 
+        am: "ጸሎቴን ያልከለከለኝ ምሕረቱንም ከእኔ ያላራቀ እግዚአብሔር ይመስገን።", 
+        en: "Blessed {be} God, which hath not turned away my prayer, nor his mercy from me." 
       },
-      ref: { am: "መዝሙረ ዳዊት 17:6", en: "Jeremiah 29:11" }
+      ref: { am: "መዝሙረ ዳዊት 65:20", en: "መዝሙረ ዳዊት 65:20 }
     },
     {
       text: { 
-        am: "በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ።", 
+        am: "ነፍሳችን እንደ ወፍ ከአዳኞች ወጥመድ አመለጠች። ወጥመድ ተሰበረ እኛም አመለጥን።", 
         en: "For I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future." 
       },
-      ref: { am: "መዝሙረ ዳዊት 17:6", en: "Jeremiah 29:11" }
+      ref: { am: "መዝሙረ ዳዊት 123:7", en: "መዝሙረ ዳዊት 123:7" }
     }
   ]
 };
