@@ -22,24 +22,45 @@ export const content = {
   favoriteVerses: [
     {
       text: { 
-        am: "እግዚአብሔር ለሚወዱት ሁሉ መልካሙን ያደርጋል።", 
+        am: "የሰው ልብ መንገዱ ያዘጋጃል፤ እግዚአብሔር ግን አካሄዱን ያቀናለታል።", 
         en: "And we know that in all things God works for the good of those who love him." 
       },
-      ref: { am: "ሮሜ 8:28", en: "Romans 8:28" }
+      ref: { am: "መጽሐፈ ምሳሌ 16:9", en: "Romans 8:28" }
     },
     {
       text: { 
-        am: "ሁሉን እችላለሁ በሚያበረታታኝ በክርስቶስ።", 
+        am: "ጭንቀት ቀርባለችና የሚረዳኝም የለምና ከእኔ አትራቅ።", 
         en: "I can do all things through Christ who strengthens me." 
       },
-      ref: { am: "ፊልጵስዩስ 4:13", en: "Philippians 4:13" }
+      ref: { am: "መዝሙረ ዳዊት 21:11", en: "Philippians 4:13" }
     },
     {
       text: { 
-        am: "እግዚአብሔር ለእናንተ ያለው ሐሳብ የሰላም ሐሳብ እንጂ የክፋት ሐሳብ አይደለም፤ የሚጠብቁትን ተስፋ እንዲሰጣችሁ ነው።", 
+        am: "በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ።", 
         en: "For I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future." 
       },
-      ref: { am: "ኤርምያስ 29:11", en: "Jeremiah 29:11" }
+      ref: { am: "መዝሙረ ዳዊት 17:6", en: "Jeremiah 29:11" }
+    },
+    {
+      text: { 
+        am: "በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ።", 
+        en: "For I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future." 
+      },
+      ref: { am: "መዝሙረ ዳዊት 17:6", en: "Jeremiah 29:11" }
+    },
+    {
+      text: { 
+        am: "በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ።", 
+        en: "For I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future." 
+      },
+      ref: { am: "መዝሙረ ዳዊት 17:6", en: "Jeremiah 29:11" }
+    },
+    {
+      text: { 
+        am: "በጨነቀኝ ጊዜ እግዚአብሔርን ጠራሁት፥ ወደ አምላኬም ጮኽሁ፤ ከመቅደሱም ቃሌን ሰማኝ፥ ጩኸቴም በፊቱ ወደ ጆሮው ገባ።", 
+        en: "For I know the plans I have for you, plans to prosper you and not to harm you, plans to give you hope and a future." 
+      },
+      ref: { am: "መዝሙረ ዳዊት 17:6", en: "Jeremiah 29:11" }
     }
   ]
 };
