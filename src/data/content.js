@@ -11,6 +11,20 @@ export const content = {
     { src: "/photos/jo2.jpg", caption: { am: "ትዝታ ፮", en: "Memory 6" } },
     { src: "/photos/jo3.jpg", caption: { am: "ትዝታ ፯", en: "Memory 7" } },
   ],
+    siblingReasons: [
+    {
+      title: { am: "የእኔ ወንድም ነህ", en: "You're my brother" },
+      desc: { am: "በደስታም በሀዘንም ሁልጊዜ አብረን ስለሆንን።", en: "Because we are always there for each other, in joy and in sorrow." }
+    },
+    {
+      title: { am: "የጸሎት ባልንጀራዬ ነህ", en: "You're my prayer partner" },
+      desc: { am: "በእምነታችን አብረን ስናድግ።", en: "Because we grow together in our Orthodox faith." }
+    },
+    {
+      title: { am: "ሁልጊዜ ላዛቅብህ እችላለሁ", en: "I can always joke with you" },
+      desc: { am: "ሳቅህ ሁልጊዜ ቀኔን ያበራል።", en: "Because your laugh always brightens my day." }
+    }
+  ],
 
   favoriteVerses: [
     {
