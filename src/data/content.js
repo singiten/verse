@@ -26,7 +26,7 @@ export const content = {
     }
   ],
   siblingPrayer: {
-    frontTitle: { am: "የወንድምነት ጸሎት", en: "A Brother's Prayer" },
+    frontTitle: { am: "የእህትነት ጸሎት", en: "A Sister's Prayer" },
     tapToOpen: { am: "ለማንበብ ንካ", en: "Tap to read" },
     prayerText: { 
       am: "ልዑል እግዚአብሔር ሁልጊዜ በህይወትህ እንዲመራህ፣ በመንፈሳዊ ሕይወትህ እንድትጠነክር እና የልብህን ሁሉ ምኞት እንዲፈጽምልህ በጸሎት እመኛለሁ። መልካም ልደት ወንድሜ!", 
