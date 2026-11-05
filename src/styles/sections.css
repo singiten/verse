@@ -410,3 +410,36 @@ section {
 @keyframes spin {
   100% { transform: rotate(360deg); }
 }
+/* Sibling Reasons Section */
+.reasons-section {
+  background-color: var(--cream);
+  padding-top: 1rem; /* Pull it closer to the message */
+}
+
+.reasons-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.reason-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border-top: 4px solid var(--gold);
+}
+
+.reason-title {
+  font-size: 1.2rem;
+  color: var(--maroon);
+  margin-bottom: 0.5rem;
+}
+
+.reason-desc {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
