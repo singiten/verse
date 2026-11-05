@@ -23,7 +23,7 @@ export default function SiblingPrayer({ lang }) {
           {/* Back of the card */}
           <div className="flip-card-back">
             <p className="prayer-text">"{t(content.siblingPrayer.prayerText)}"</p>
-            <p className="prayer-sign">{lang === 'am' ? '— በፍቅር' : '— With love'}</p>
+            <p className="prayer-sign">{lang === 'am' ? '— ' : '— With love'}</p>
           </div>
 
         </div>
