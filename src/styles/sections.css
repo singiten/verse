@@ -197,7 +197,7 @@ section {
 
 @keyframes gentleFloat {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); } /* Increased for a more noticeable bounce */
+  50% { transform: translateY(-8px); } /* Reduced to -8px so they don't overlap */
   100% { transform: translateY(0px); }
 }
 
@@ -227,6 +227,7 @@ section {
   padding: 2.5rem 1.5rem;
   box-shadow: 0 10px 30px rgba(122, 31, 43, 0.05);
   border: 1px solid rgba(212, 165, 55, 0.2);
+  margin: 0.5rem 0;
 }
 
 .message-body {
@@ -262,6 +263,7 @@ section {
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
   border-top: 4px solid var(--gold);
+  margin: 0.5rem 0;
 }
 
 .reason-title {
@@ -453,6 +455,13 @@ section {
 }
 
 /* Verses Section */
+.verses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0; /* Adds breathing room so cards don't clip when floating */
+}
+
 .favorite-verse-card {
   /* Changed background to burgundy, matching the blessing card vibe */
   background: var(--maroon); 
@@ -462,6 +471,7 @@ section {
   /* Changed left border to gold so it pops against the burgundy */
   border-left: 4px solid var(--gold); 
   transition: transform 0.2s;
+  margin: 0.5rem 0; /* Adds buffer zone around the card */
 }
 
 .fav-verse-text {
@@ -479,7 +489,6 @@ section {
   color: var(--gold); 
   font-size: 0.95rem;
 }
-
 
 
 /* Fun Section (Music & Candle) */
