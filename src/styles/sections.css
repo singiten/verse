@@ -1,3 +1,10 @@
+Here is the complete, clean **`src/styles/sections.css`** file. 
+
+I fixed the animation logic so all the cards will automatically pop in and gently float up and down on their own (no hover needed). I also kept the 3D flip animation for the prayer card.
+
+Copy and paste this entirely to replace your current `sections.css`:
+
+```css
 section {
   padding: 3rem 1.25rem;
   max-width: var(--maxw);
@@ -102,25 +109,31 @@ section {
 }
 
 /* =========================================
-   NEW: Global Card Animations (Pop & Float)
+   Global Card Animations (Pop & Float)
    ========================================= */
-.card, .reason-card, .favorite-verse-card, .gallery-item {
-  animation: floatUp 0.6s ease-out forwards;
-}
-
-/* Make them bounce gently when hovered/idle */
-.card:hover, .reason-card:hover, .favorite-verse-card:hover {
-  animation: gentleFloat 3s ease-in-out infinite;
-}
-
 @keyframes floatUp {
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes gentleFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); } /* Floats up by 8 pixels */
+  100% { transform: translateY(0px); }
+}
+
+/* Apply float up on load, then infinite gentle float */
+.card, .reason-card, .favorite-verse-card {
+  animation: floatUp 0.6s ease-out forwards, gentleFloat 4s ease-in-out infinite;
+}
+
+/* Stagger the animations slightly so they don't all move in perfect sync */
+.reason-card:nth-child(1) { animation-delay: 0s, 0.2s; }
+.reason-card:nth-child(2) { animation-delay: 0s, 0.6s; }
+.reason-card:nth-child(3) { animation-delay: 0s, 1.0s; }
+
+.favorite-verse-card:nth-child(even) {
+  animation: floatUp 0.6s ease-out forwards, gentleFloat 5s ease-in-out infinite;
 }
 
 /* Message Section */
@@ -185,7 +198,7 @@ section {
 }
 
 /* =========================================
-   NEW: Sibling Prayer Flip Card
+   Sibling Prayer Flip Card
    ========================================= */
 .prayer-section {
   background-color: var(--cream);
@@ -480,3 +493,120 @@ section {
 @keyframes spin {
   100% { transform: rotate(360deg); }
 }
+
+/* Candle CSS */
+.candle-container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.candle-container:active {
+  transform: scale(0.95);
+}
+
+.candle-body {
+  width: 40px;
+  height: 100px;
+  background: linear-gradient(to right, #fdf6ec 0%, #e6d5c3 50%, #fdf6ec 100%);
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.candle-body::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 8px;
+  background: #333;
+}
+
+.flame {
+  width: 20px;
+  height: 30px;
+  background: #ffb703;
+  border-radius: 50% 50% 20% 20%;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -5px;
+  box-shadow: 0 0 15px 5px rgba(255, 183, 3, 0.4);
+  transition: all 0.3s ease;
+  animation: flicker 0.5s infinite alternate;
+}
+
+.candle-container.out .flame {
+  opacity: 0;
+  transform: scale(0) translateY(10px);
+  box-shadow: none;
+  animation: none;
+}
+
+.candle-text {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: var(--maroon);
+}
+
+@keyframes flicker {
+  0% { transform: scale(1) rotate(-2deg); }
+  100% { transform: scale(1.1) rotate(2deg); opacity: 0.8; }
+}
+
+.confetti-btn {
+  background-color: var(--gold);
+  color: var(--ink);
+  box-shadow: 0 4px 15px rgba(212, 165, 55, 0.4);
+  margin-top: 2rem;
+}
+
+/* Closing Section */
+.closing-section {
+  background-color: var(--maroon);
+  color: white;
+  padding: 4rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+}
+
+.closing-content {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.closing-title {
+  color: var(--gold);
+  font-size: 2rem;
+}
+
+.closing-body {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #e6d5c3;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.secondary-btn:active {
+  background: var(--gold);
+  color: var(--maroon);
+}
+
+.footer-note {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+}
+```
