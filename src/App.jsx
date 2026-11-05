@@ -7,7 +7,7 @@ import Verses from './components/Verses';
 import Fun from './components/Fun';
 import Closing from './components/Closing';
 import LangToggle from './components/LangToggle';
-import SiblingReasons from './components/SiblingReasons';
+// import SiblingReasons from './components/SiblingReasons';
 import SiblingPrayer from './components/SiblingPrayer';
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
       <main>
         <Hero lang={lang} />
         <Message lang={lang} />
-        <SiblingReasons lang={lang} />
+       
         <SiblingPrayer lang={lang} />
         <Blessing lang={lang} />
         <Gallery lang={lang} />
