@@ -18,6 +18,7 @@ export default function App() {
       <main>
         <Hero lang={lang} />
         <Message lang={lang} />
+        <SiblingReasons lang={lang} />
         <Blessing lang={lang} />
         <Gallery lang={lang} />
         <Verses lang={lang} />
