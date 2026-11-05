@@ -7,7 +7,7 @@ import Verses from './components/Verses';
 import Fun from './components/Fun';
 import Closing from './components/Closing';
 import LangToggle from './components/LangToggle';
-
+import SiblingReasons from './components/SiblingReasons';
 export default function App() {
   const [lang, setLang] = useState('am'); 
 
