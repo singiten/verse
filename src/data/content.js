@@ -25,6 +25,14 @@ export const content = {
       desc: { am: "ሳቅህ ሁልጊዜ ቀኔን ያበራል።", en: "Because your laugh always brightens my day." }
     }
   ],
+  siblingPrayer: {
+    frontTitle: { am: "የወንድምነት ጸሎት", en: "A Brother's Prayer" },
+    tapToOpen: { am: "ለማንበብ ንካ", en: "Tap to read" },
+    prayerText: { 
+      am: "ልዑል እግዚአብሔር ሁልጊዜ በህይወትህ እንዲመራህ፣ በመንፈሳዊ ሕይወትህ እንድትጠነክር እና የልብህን ሁሉ ምኞት እንዲፈጽምልህ በጸሎት እመኛለሁ። መልካም ልደት ወንድሜ!", 
+      en: "I pray that the Almighty God continues to guide your life, strengthen you in your spiritual journey, and fulfill all the desires of your heart. Happy Birthday, my brother!" 
+    }
+  },
 
   favoriteVerses: [
     {
