@@ -61,7 +61,7 @@ export default function Fun({ lang }) {
           <audio ref={audioRef2} src="/photos/jo.mp3" loop onEnded={() => setPlayingTrack('none')} />
           
           <p className="music-hint">
-            {lang === 'am' ? 'ዘፈን ምረጥ:' : 'Choose a song:'}
+            {lang === 'am' ? 'መዝሙር ምረጥ:' : 'Choose a mezmur:'}
           </p>
 
           <div className="music-buttons-grid">
@@ -74,7 +74,7 @@ export default function Fun({ lang }) {
                 <div className="vinyl-center"></div>
               </div>
               <span className="music-text">
-                {playingTrack === 'song1' ? 'Erefte (Pause)' : 'Erefte 🎵'}
+                {playingTrack === 'song1' ? 'Erefte (Pause)' : ' 🎵'}
               </span>
             </button>
 
@@ -87,7 +87,7 @@ export default function Fun({ lang }) {
                 <div className="vinyl-center"></div>
               </div>
               <span className="music-text">
-                {playingTrack === 'song2' ? 'Jo (Pause)' : 'Jo 🎵'}
+                {playingTrack === 'song2' ? 'Jo (Pause)' : ' 🎵'}
               </span>
             </button>
           </div>
