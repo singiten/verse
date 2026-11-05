@@ -453,48 +453,34 @@ section {
 }
 
 /* Verses Section */
-.verses-section {
-  background-color: var(--cream);
-}
-
-.verses-subtitle {
-  color: var(--muted);
-  font-size: 1rem;
-  margin-top: -1rem;
-}
-
-.verses-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
 .favorite-verse-card {
-  background: white;
+  /* Changed background to burgundy, matching the blessing card vibe */
+  background: var(--maroon); 
   padding: 2rem 1.5rem;
   border-radius: var(--radius);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-  border-left: 4px solid var(--maroon);
+  box-shadow: 0 8px 20px rgba(122, 31, 43, 0.15);
+  /* Changed left border to gold so it pops against the burgundy */
+  border-left: 4px solid var(--gold); 
   transition: transform 0.2s;
-}
-
-.favorite-verse-card:active {
-  transform: scale(0.98); /* Slight tap effect on mobile */
 }
 
 .fav-verse-text {
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--ink);
+  /* Changed text to white */
+  color: white; 
   margin-bottom: 1rem;
   line-height: 1.6;
 }
 
 .fav-verse-ref {
   font-weight: 700;
-  color: var(--gold);
+  /* Reference stays gold to look elegant */
+  color: var(--gold); 
   font-size: 0.95rem;
 }
+
+
 
 /* Fun Section (Music & Candle) */
 .music-player {
