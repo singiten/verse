@@ -29,7 +29,7 @@ export const content = {
     frontTitle: { am: "የእህትነት ጸሎት", en: "A Sister's Prayer" },
     tapToOpen: { am: "ለማንበብ ንካ", en: "Tap to read" },
     prayerText: { 
-      am: "ልዑል እግዚአብሔር ሁልጊዜ በህይወትህ እንዲመራህ፣ በመንፈሳዊ ሕይወትህ እንድትጠነክር እና የልብህን ሁሉ ምኞት እንዲፈጽምልህ በጸሎት እመኛለሁ። መልካም ልደት ወንድሜ!", 
+      am: "ልዑል እግዚአብሔር ሁልጊዜ በህይወትህ እንዲመራህ፣ በመንፈሳዊ ሕይወትህ እንድትጠነክር እና የልብህን ሁሉ ምኞት እንዲፈጽምልህ በጸሎት እመኛለሁ። መልካም ልደት!", 
       en: "I pray that the Almighty God continues to guide your life, strengthen you in your spiritual journey, and fulfill all the desires of your heart. Happy Birthday, my brother!" 
     }
   },
