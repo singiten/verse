@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import confetti from 'canvas-confetti';
 import { copy } from '../data/copy';
+import { content } from '../data/content';
 
 export default function Fun({ lang }) {
   const t = (obj) => obj[lang];
@@ -8,6 +9,9 @@ export default function Fun({ lang }) {
   
   // State to track which song is currently playing ('none', 'song1', 'song2')
   const [playingTrack, setPlayingTrack] = useState('none');
+  
+  // State for the 10-second celebration
+  const [showCelebration, setShowCelebration] = useState(false);
   
   // Two separate refs for the two audio elements
   const audioRef1 = useRef(null);
@@ -22,12 +26,45 @@ export default function Fun({ lang }) {
     });
   };
 
-  const blowCandle = () => {
-    if (candleLit) {
-      setCandleLit(false);
-      fireConfetti();
-      if (navigator.vibrate) navigator.vibrate(200);
-    }
+  // The 10-second celebration sequence
+  const triggerCelebration = () => {
+    if (!candleLit) return; // Don't re-trigger if already blown out
+    
+    setCandleLit(false);
+    setShowCelebration(true);
+
+    // 1. Initial big blast
+    fireConfetti();
+    if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
+
+    // 2. Continuous fireworks for 10 seconds
+    const duration = 10 * 1000;
+    const animationEnd = Date.now() + duration;
+    
+    const interval = setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+      if (timeLeft <= 0) {
+        clearInterval(interval);
+        setShowCelebration(false); // Hide the popup card after 10s
+        return;
+      }
+      
+      // Fire from the left and right edges
+      confetti({
+        particleCount: 50,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 0.8 },
+        colors: ['#7a1f2b', '#d4a537']
+      });
+      confetti({
+        particleCount: 50,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1, y: 0.8 },
+        colors: ['#7a1f2b', '#d4a537']
+      });
+    }, 250); // Fires every 250ms
   };
 
   // Reusable function to handle playing/pausing
@@ -49,7 +86,21 @@ export default function Fun({ lang }) {
   };
 
   return (
-    <section id="fun" className="section-container fun-section">
+    <section id="fun" className={`section-container fun-section ${showCelebration ? 'celebrating-bg' : ''}`}>
+      
+      {/* THE CELEBRATION POPUP CARD */}
+      {showCelebration && (
+        <div className="celebration-modal">
+          <div className="celebration-card">
+            <h1 className="celebration-text">
+              {lang === 'am' ? 'መልካም ልደት!' : 'Happy Birthday!'}
+            </h1>
+            <h2 className="celebration-name">{t(content.name)}!</h2>
+            <p className="celebration-sub">🎉 🎂 ✨</p>
+          </div>
+        </div>
+      )}
+
       <h2 className="section-title text-center">{t(copy.fun.title)}</h2>
       
       <div className="fun-interactive-area">
@@ -95,10 +146,10 @@ export default function Fun({ lang }) {
 
         <div className="divider-line"></div>
 
-        {/* Candle */}
+        {/* Candle - Now triggers the 10s celebration */}
         <div 
           className={`candle-container ${candleLit ? 'lit' : 'out'}`} 
-          onClick={blowCandle}
+          onClick={triggerCelebration}
           role="button"
           tabIndex={0}
         >
