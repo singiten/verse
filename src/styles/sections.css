@@ -3,6 +3,7 @@ section {
   max-width: var(--maxw);
   margin: 0 auto;
 }
+
 /* Language Toggle */
 .lang-toggle {
   position: fixed;
@@ -82,6 +83,7 @@ section {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 /* Shared Section Styles */
 .section-container {
   padding: 4rem 1.25rem;
@@ -97,6 +99,28 @@ section {
 
 .text-center {
   text-align: center;
+}
+
+/* =========================================
+   NEW: Global Card Animations (Pop & Float)
+   ========================================= */
+.card, .reason-card, .favorite-verse-card, .gallery-item {
+  animation: floatUp 0.6s ease-out forwards;
+}
+
+/* Make them bounce gently when hovered/idle */
+.card:hover, .reason-card:hover, .favorite-verse-card:hover {
+  animation: gentleFloat 3s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 /* Message Section */
@@ -124,6 +148,132 @@ section {
   color: var(--maroon);
   font-size: 1.1rem;
   text-align: right;
+}
+
+/* Sibling Reasons Section */
+.reasons-section {
+  background-color: var(--cream);
+  padding-top: 1rem; /* Pull it closer to the message */
+}
+
+.reasons-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.reason-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border-top: 4px solid var(--gold);
+}
+
+.reason-title {
+  font-size: 1.2rem;
+  color: var(--maroon);
+  margin-bottom: 0.5rem;
+}
+
+.reason-desc {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* =========================================
+   NEW: Sibling Prayer Flip Card
+   ========================================= */
+.prayer-section {
+  background-color: var(--cream);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 250px; /* Slightly taller to fit text */
+  perspective: 1000px; /* Gives the 3D effect */
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* The flip happens here */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(122, 31, 43, 0.1);
+}
+
+/* Front Styling */
+.flip-card-front {
+  background: var(--maroon);
+  color: white;
+  border: 2px solid var(--gold);
+}
+
+.prayer-title {
+  color: var(--gold);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tap-hint {
+  font-size: 0.9rem;
+  color: #e6d5c3;
+  margin-bottom: 1rem;
+}
+
+.cross-icon {
+  font-size: 2.5rem;
+  color: var(--gold);
+}
+
+/* Back Styling */
+.flip-card-back {
+  background: white;
+  color: var(--ink);
+  transform: rotateY(180deg);
+  border: 2px solid var(--gold);
+}
+
+.prayer-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--maroon);
+  margin-bottom: 1rem;
+}
+
+.prayer-sign {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
 }
 
 /* Blessing Section */
@@ -171,6 +321,7 @@ section {
   color: #e6d5c3;
   font-style: italic;
 }
+
 /* Gallery Section */
 .gallery-scroll {
   display: flex;
@@ -208,88 +359,6 @@ section {
   background: white;
 }
 
-/* Wishes Section */
-.wishes-section {
-  background-color: #f7ece1;
-}
-
-.wishes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.wish-card {
-  background: white;
-  padding: 1.25rem;
-  border-radius: var(--radius);
-  border-left: 4px solid var(--gold);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.wish-text {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.05rem;
-  font-style: italic;
-}
-
-.wish-author {
-  margin: 0;
-  font-weight: 700;
-  color: var(--maroon);
-  font-size: 0.9rem;
-  text-align: right;
-}
-
-.wish-form-card {
-  margin-top: 2rem;
-}
-
-.input-group {
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.input-group label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--muted);
-  margin-bottom: 0.4rem;
-}
-
-.input-group input,
-.input-group textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 1rem;
-  background: #fafafa;
-}
-
-.input-group input:focus,
-.input-group textarea:focus {
-  outline: none;
-  border-color: var(--maroon);
-  background: white;
-}
-
-.full-width {
-  width: 100%;
-  margin-top: 0.5rem;
-}
-
-.success-msg {
-  color: green;
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
 /* Verses Section */
 .verses-section {
   background-color: var(--cream);
@@ -333,7 +402,8 @@ section {
   color: var(--gold);
   font-size: 0.95rem;
 }
-/* Music Player Section */
+
+/* Fun Section (Music & Candle) */
 .music-player {
   display: flex;
   flex-direction: column;
@@ -409,37 +479,4 @@ section {
 
 @keyframes spin {
   100% { transform: rotate(360deg); }
-}
-/* Sibling Reasons Section */
-.reasons-section {
-  background-color: var(--cream);
-  padding-top: 1rem; /* Pull it closer to the message */
-}
-
-.reasons-grid {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.reason-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  border-top: 4px solid var(--gold);
-}
-
-.reason-title {
-  font-size: 1.2rem;
-  color: var(--maroon);
-  margin-bottom: 0.5rem;
-}
-
-.reason-desc {
-  font-size: 1rem;
-  color: var(--muted);
-  margin: 0;
-  line-height: 1.5;
 }
