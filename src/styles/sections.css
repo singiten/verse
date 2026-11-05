@@ -1,10 +1,4 @@
-Here is the complete, clean **`src/styles/sections.css`** file. 
 
-I fixed the animation logic so all the cards will automatically pop in and gently float up and down on their own (no hover needed). I also kept the 3D flip animation for the prayer card.
-
-Copy and paste this entirely to replace your current `sections.css`:
-
-```css
 section {
   padding: 3rem 1.25rem;
   max-width: var(--maxw);
