@@ -1,4 +1,3 @@
-
 section {
   padding: 3rem 1.25rem;
   max-width: var(--maxw);
@@ -112,22 +111,23 @@ section {
 
 @keyframes gentleFloat {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); } /* Floats up by 8 pixels */
+  50% { transform: translateY(-12px); } /* Increased for a more noticeable bounce */
   100% { transform: translateY(0px); }
 }
 
 /* Apply float up on load, then infinite gentle float */
 .card, .reason-card, .favorite-verse-card {
-  animation: floatUp 0.6s ease-out forwards, gentleFloat 4s ease-in-out infinite;
+  /* Sped up to 2.5s so the motion is clear */
+  animation: floatUp 0.6s ease-out forwards, gentleFloat 2.5s ease-in-out infinite;
 }
 
 /* Stagger the animations slightly so they don't all move in perfect sync */
-.reason-card:nth-child(1) { animation-delay: 0s, 0.2s; }
-.reason-card:nth-child(2) { animation-delay: 0s, 0.6s; }
-.reason-card:nth-child(3) { animation-delay: 0s, 1.0s; }
+.reason-card:nth-child(1) { animation-delay: 0s, 0.1s; }
+.reason-card:nth-child(2) { animation-delay: 0s, 0.4s; }
+.reason-card:nth-child(3) { animation-delay: 0s, 0.7s; }
 
 .favorite-verse-card:nth-child(even) {
-  animation: floatUp 0.6s ease-out forwards, gentleFloat 5s ease-in-out infinite;
+  animation: floatUp 0.6s ease-out forwards, gentleFloat 3s ease-in-out infinite;
 }
 
 /* Message Section */
@@ -603,4 +603,3 @@ section {
   font-size: 0.85rem;
   color: rgba(255,255,255,0.5);
 }
-
